@@ -9,23 +9,28 @@
     padding: 4px;
     padding-left: 8px;
     padding-right: 8px;
-    margin-bottom: 14px;
+    margin: 10px auto;
+    margin-bottom: 15px;
     border: 2px solid black;
     background-color: rgb(74, 174, 255);
     color: white;
     border-radius: 4px;
+    width: fit-content;
 }
 
-/* .container p{
-    margin-bottom: 2.5px;
-    padding-bottom: 0px;
+.todo-input input{
+    width: 300px;
 }
 
-.btn{
-    font-size: 12px;
-    padding: 4px;
-    margin-bottom: 14px;
-    border: 2px solid black;
-    background-color: rgb(74, 174, 255);
-    color: white;
-} */
+input:nth-child(4){
+    height: 100px;
+}
+
+.todo-list{
+    background-color: rgb(241, 241, 241);
+    width: 600px;
+    margin: 10px auto;
+    border-radius: 15px;
+}
+
+

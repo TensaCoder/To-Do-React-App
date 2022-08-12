@@ -1,28 +1,24 @@
-import React from 'react'
+import React, { useState } from 'react'
 import TodoItem from './TodoItem'
+import AddTodo from './AddTodo';
 import '../CSS/Todo.css'
 
 export default function Todo(props) {
+  let completed = {
+    color: "grey"
+  }
   return (
-    <div className='container my-3'>
-      <div className="conatiner todo-input">
-        <h5>Title</h5>
-        <input className='mb-3 p-1' type="text" name="title" id="title" placeholder='Enter Title' />
-
-        <h5>Description</h5>
-        <input className='mb-3 p-1' type="text" name="desc" id="desc" placeholder='Enter Description'/>
-
-        <button className='btn-submit' type="submit" onClick={props.saveTodo}>Add</button>
-
+    <div className='my-3'>
+      <AddTodo newTodo={() => { props.newTodo() }} />
+      
+      <div className="todo-list">
+        <h2 className='text-center my-3'>Things To Do</h2>
+        {props.todos.length === 0 ? <h5 className='text-center mt-5' style={completed}>Congratulations!!! Everything's Completed</h5> :
+          props.todos.map((todo) => {
+            return <TodoItem todo={todo} key={todo.sno} onDelete={props.onDelete} />
+          })
+        }
       </div>
-
-
-
-      <h2 className='text-center my-3'>Things To Do</h2>
-      {props.todos.map((todo) => {
-        return <TodoItem todo={todo} key={todo.sno} onDelete={props.onDelete} />
-      })
-      }
     </div>
   )
 }
