@@ -13,13 +13,21 @@ function App() {
     }));
   };
 
+  let sno;
   let newTodo = (title, desc)=>{
     if (todos.length===0){
-      let sno = 1;
+      sno = 1;
     }
     else{
-      let sno = todos.length; 
+      sno = todos[todos.length - 1].sno + 1; 
     }
+    let newtodo ={
+      sno: sno,
+      title:title,
+      desc:desc
+    }
+    console.log(newtodo);
+    setTodos([...todos,newtodo]);
   };
 
   const [todos, setTodos] = useState([

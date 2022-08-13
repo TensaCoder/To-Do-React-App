@@ -23,6 +23,8 @@
 .btn-completed{
     font-size: 12px;
     padding: 4px;
+    width: 80px;
+    margin: 0px auto;
     margin-bottom: 14px;
     border: 2px solid black;
     background-color: rgb(74, 174, 255);
@@ -31,6 +33,6 @@
 
 .todoItem{
     display: block;
-    width: fit-content;
+    width:fit-content;
     margin:20px auto;
 }

@@ -10,7 +10,7 @@ export default function Todo(props) {
 
   return (
     <div className='my-3'>
-      <AddTodo newTodo={() => { props.newTodo() }} />
+      <AddTodo newTodo={props.newTodo} />
 
       <div className="todo-list">
         <h2 className='text-center py-3'>Things To Do</h2>
