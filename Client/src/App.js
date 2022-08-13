@@ -42,7 +42,7 @@ function App() {
   return (
     <div>
       <Header />
-      <Todo todos={todos} onDelete={onDelete}/>
+      <Todo todos={todos} onDelete={onDelete} newTodo={newTodo}/>
       <About/>
       <Footer />
     </div>
