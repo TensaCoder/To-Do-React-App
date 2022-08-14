@@ -1,3 +1,8 @@
-/* *{
-    font-size: small;
-} */
+#navbarNavDropdown{
+    width: 70%;
+    text-align: center;
+}
+
+#navbarNavDropdown ul{
+    margin: 2px auto;
+}
