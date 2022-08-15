@@ -6,11 +6,22 @@ import Todo from './Components/Todo.js';
 import {useState} from 'react';
 
 function App() {
+  let initTodo;
+  
+  if (localStorage.getItem('todos') === null){
+    initTodo = [];
+  }
+  else{
+    initTodo = JSON.parse(localStorage.getItem('todos'));
+  }
+  const [todos, setTodos] = useState(initTodo);
+
   let onDelete =(todo)=>{
 
     setTodos(todos.filter((showTodo)=>{
       return showTodo!==todo
     }));
+    localStorage.setItem('todos', JSON.stringify(todos))
   };
 
   let sno;
@@ -28,24 +39,13 @@ function App() {
     }
     console.log(newtodo);
     setTodos([...todos,newtodo]);
+
+    // if (localStorage.getItem('todos')===null){
+    //   localStorage.setItem('todos', JSON.stringify(todos))
+    // }
+    localStorage.setItem('todos', JSON.stringify(todos))
   };
 
-  const [todos, setTodos] = useState([
-    {
-      sno:1,
-      title:'item 1',
-      desc: "desc 1",
-    },
-    {
-      sno:2,
-      title:'item 2',
-      desc: "desc 2",
-    },{
-      sno:3,
-      title:'item 3',
-      desc: "desc 3"
-    }
-  ]);
 
   return (
     <div>
