@@ -10,7 +10,7 @@ const AddTodo = ({newTodo}) => {
     let submit = (event)=>{
         event.preventDefault();
         if (!title || !desc){
-            alert("Title or Description cann't be empty!!!");
+            alert("Title or Description can't be empty!!!");
         }
         else{
             newTodo(title, desc);
