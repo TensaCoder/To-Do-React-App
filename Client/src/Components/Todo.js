@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import TodoItem from './TodoItem'
 import AddTodo from './AddTodo';
 import '../CSS/Todo.css'
@@ -8,10 +8,11 @@ export default function Todo(props) {
   let completed = {
     color: "grey"
   }
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <div className='my-3'>
-      <AddTodo newTodo={props.newTodo} />
+      {/* <AddTodo newTodo={props.newTodo} /> */}
 
       <div className="todo-list">
         <h2 className='text-center py-3'>Things To Do</h2>
@@ -22,7 +23,8 @@ export default function Todo(props) {
           })
         }
 
-        <button id='add-btn'> <MdOutlineAddCircleOutline size='2.5em'/></button>
+        <button id='add-btn' onClick={()=>{setIsOpen(true)}}><MdOutlineAddCircleOutline size='2.5em'/></button>
+        <AddTodo newTodo={props.newTodo} open={isOpen} onClose={() => {setIsOpen(false)}}/>
       </div>
     </div>
   )
