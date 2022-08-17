@@ -3,7 +3,14 @@ import React from 'react'
 
 function Footer() {
   return (
-    <div>Footer</div>
+    <div className='footer'>
+      <div className="right">
+
+      </div>
+      <div className="left">
+        
+      </div>
+    </div>
   )
 }
 

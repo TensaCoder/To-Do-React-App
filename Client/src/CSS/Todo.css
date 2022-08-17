@@ -28,9 +28,17 @@ input:nth-child(4){
 
 .todo-list{
     background-color: rgb(241, 241, 241);
-    width: 70%;
+    width: 50%;
     margin: 10px auto;
     border-radius: 20px;
 }
 
+#add-btn{
+    border: none;
+    outline: none;
+    display: block;
+    width: 3em;
+    margin: 5px auto;
+    padding-bottom: 10px;
+}
 
