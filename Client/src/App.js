@@ -1,5 +1,4 @@
 import './App.css';
-import About from './Components/About';
 import Footer from './Components/Footer';
 import Header from './Components/Header';
 import Todo from './Components/Todo.js';
@@ -52,7 +51,6 @@ function App() {
     <div>
       <Header />
       <Todo todos={todos} onDelete={onDelete} newTodo={newTodo} />
-      <About />
       <Footer />
     </div>
   );

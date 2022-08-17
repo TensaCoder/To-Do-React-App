@@ -29,7 +29,7 @@ input:nth-child(4){
 .todo-list{
     background-color: rgb(241, 241, 241);
     width: 50%;
-    margin: 10px auto;
+    margin: 20px auto;
     border-radius: 20px;
 }
 
