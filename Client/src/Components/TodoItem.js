@@ -4,23 +4,29 @@ import '../CSS/TodoItem.css'
 
 const TodoItem = ({todo, onDelete}) => {
 
-  const [radioValue, setRadioValue] = useState('false');
+  const [checked, setChecked] = useState(false);
+  let handleClick= () =>{
+    console.log("Click event fired , Before: ", checked)
+    setChecked(!checked);
+    console.log("Click event fired , After: ", checked)
 
-  let onChange=(event)=>{
-    setRadioValue(event.target.value);
-    console.log(event.target.value)
-    console.log(radioValue);
+  }
+  let handleChange = (e) =>{
+    console.log("Change event fired , Before: ", checked)
+    setChecked(e.target.checked);
+    console.log("Change event fired , After: ", checked);
   }
 
   return (
     <>
     <div className='todoItem'>
-      <div className="radio-check">
-        <input type="radio" value='true' name={todo.sno} id="complete-radio" onChange={onChange} />
+      <div className="checkbox-input">
+        <input type="checkbox" checked={checked} id="complete-checkbox" onChange={handleChange} onClick={handleClick} />
       </div>
       <div className='todo-content'>
       <h5 className='my-0 p-0'>{todo.title}</h5>
       <p>{todo.desc}</p>
+      <p>Value of checkbox : {checked}</p>
       </div>
       <button className=' btn-completed' onClick={()=>{onDelete(todo)}}><MdDelete size='2em'/></button>
     </div>

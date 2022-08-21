@@ -33,11 +33,17 @@ function App() {
     let newtodo = {
       sno: sno,
       title: title,
-      desc: desc
+      desc: desc,
+      checked: false
     }
+    // Remove this line later
     console.log(newtodo);
     setTodos([...todos, newtodo]);
   };
+  
+  // let completeTodo=()=>{
+
+  // }
 
   const [todos, setTodos] = useState(initTodo);
   
