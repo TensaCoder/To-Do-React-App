@@ -21,7 +21,9 @@ const TodoItem = ({todo, onDelete}) => {
     <>
     <div className='todoItem'>
       <div className="checkbox-input">
-        <input type="checkbox" checked={checked} id="complete-checkbox" onChange={handleChange} onClick={handleClick} />
+        <button onClick={handleClick}>
+        <input type="checkbox" checked={checked} id="complete-checkbox" onChange={handleChange} />
+        </button>
       </div>
       <div className='todo-content'>
       <h5 className='my-0 p-0'>{todo.title}</h5>
