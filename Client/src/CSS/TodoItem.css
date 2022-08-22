@@ -50,7 +50,8 @@
 .todo-checked{
     text-decoration: line-through;
     color: grey;
+    opacity: 0.5;
 }
-/* .todo-unchecked{
-    
-} */
+.todo-unchecked{
+    color: black;
+}

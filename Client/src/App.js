@@ -36,13 +36,9 @@ function App() {
       desc: desc
     }
     // Remove this line later
-    console.log(newtodo);
+    // console.log(newtodo);
     setTodos([...todos, newtodo]);
   };
-  
-  // let completeTodo=()=>{
-
-  // }
 
   const [todos, setTodos] = useState(initTodo);
   
