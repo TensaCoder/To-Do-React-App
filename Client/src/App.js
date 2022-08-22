@@ -33,8 +33,7 @@ function App() {
     let newtodo = {
       sno: sno,
       title: title,
-      desc: desc,
-      checked: false
+      desc: desc
     }
     // Remove this line later
     console.log(newtodo);
@@ -42,7 +41,7 @@ function App() {
   };
   
   // let completeTodo=()=>{
-        
+
   // }
 
   const [todos, setTodos] = useState(initTodo);

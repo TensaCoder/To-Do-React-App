@@ -6,6 +6,10 @@
 .todo-content p{
     margin-bottom: 0px;
 }
+.todo-content h5{
+    margin: 0px;
+    padding: 0px;
+}
 
 .todoItem{
     display: flex;
@@ -42,3 +46,11 @@
 .checkbox-input{
     padding-left: 15px;
 }
+
+.todo-checked{
+    text-decoration: line-through;
+    color: grey;
+}
+/* .todo-unchecked{
+    
+} */
