@@ -39,6 +39,10 @@ function App() {
     // console.log(newtodo);
     setTodos([...todos, newtodo]);
   };
+  
+  // let completeTodo=()=>{
+
+  // }
 
   const [todos, setTodos] = useState(initTodo);
   

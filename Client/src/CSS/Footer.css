@@ -1,13 +1,16 @@
 .footer{
     position: sticky;
-    top: 100vh;
+    top: 100%;
+    /* right: 0px; */
+    /* left: 0px;
+    bottom: 0px; */
     width: 100%;
     height: 300px;
     background-color: rgb(34, 34, 34);
     color: white;
     display: flex;
     flex-wrap: wrap;
-    z-index: 1;
+    /* z-index: 1; */
 }
 .left{
     width: 50%;
