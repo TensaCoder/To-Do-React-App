@@ -13,10 +13,11 @@ const TodoItem = ({ todo, onDelete }) => {
         return [...prev, event.target.value]
       }
       else{
-        demo = prev.filter((item)=>{
-          return item.title !== event.target.value
-        })
-        // prev.splice(prev.indexOf(event.target.value), 1);
+        // let demo = prev.filter((item)=>{
+        //   return item.title !== event.target.value
+        // })
+        // return demo
+        return prev.splice(prev.indexOf(event.target.value), 1);
       }
     })
 
